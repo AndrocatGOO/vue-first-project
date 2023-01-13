@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first vue project</title>
+    <style type="text/css">
+        .abierto{
+            color:green
+        }
+        .cerrado{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div c id="app2">
+        
+    </div>
+    <!--<div id="app">
+        <h1>{{cuenta}}</h1>
+        <button id="mas" v-on:click="sumar">+</button>
+        <button id="menos" v-on:click="restar">-</button>
+    </div>-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return { 
+                };
+            },
+            watch:{
+            },
+            methods:{
+            },
+            computed:{
+            },
+            template:`
+            
+            `
+        })
+        app.component('item',{
+
+        });
+        const vm = app.mount("#app2")
+    </script>
+    <!--<script>
+        const vm = Vue.createApp({
+            data(){
+                return { 
+                    text:"puerta cerrada",
+                    open: false,
+                    className:"cerrado"
+                };
+            },
+            watch:{
+                open(value){
+                    if (value){
+                        this.text = "puerta abierta";
+                        this.className="abierto"
+                    }else{
+                        this.text = "puerta cerrada";
+                        this.className="cerrado"
+                    }
+                }
+            },
+            methods:{
+                abrir(){
+
+                }
+            },
+            computed:{
+            },
+            template:`
+            <div :class="className">{{text}}</div>
+            <button  @click="open = !open">{{ open ? "cerrar" : "abrir" }}</button>
+            `
+        }).mount("#app2")-->
+    </script>
+    <!--<script>
+        const vm = Vue.createApp({
+            data(){
+                return { 
+                    text:"puerta cerrada",
+                    open: false,
+                    button: "abrir"
+                };
+            },
+            watch:{
+                open(value){
+                    if (value){
+                        this.text = "puerta abierta"
+                    }else{
+                        this.text = "puerta cerrada"
+                    }
+                }
+            },
+            methods:{
+                abrir(){
+
+                }
+            },
+            computed:{
+            },
+            template:`
+            <div>{{text}}</div>
+            <button @click="open = !open">{{ open ? "cerrar" : "abrir" }}</button>
+            `
+        }).mount("#app2")
+    </script>-->
+    <!--<script>
+        const vm = Vue.createApp({
+            data(){
+                return { 
+                    firstname:"andres",
+                    lastname:"garzon",
+                    now: new Date()
+                };
+            },
+            methods:{
+            },
+            computed:{
+                fullName(){
+                    return this.firstname + " " + this.lastname
+                }
+            },
+            template:`
+            <div>{{fullName}}</div>
+            <div>{{now.toLocaleDateString()}}</div>
+            `
+        }).mount("#app2")
+    </script>-=->
+    <!--<script>
+        const vm = Vue.createApp({
+            data(){
+                return { 
+                    text: "hola mundo"
+                };
+            },
+            methods:{
+                change(e){
+                    this.text = e.target.value;
+                }
+            },
+            template:`<p>{{text}}</p><input id="input" type="text" v-on:change="change" />`
+        }).mount("#app2")
+    </script>-->
+    <!--<script>
+        const vm = Vue.createApp({
+            data(){
+                return {
+                    cuenta: 0
+                };
+            },
+            methods:{
+                sumar(){
+                    this.cuenta++;
+                },
+                restar(){
+                    this.cuenta--;
+                }
+            }
+        }).mount("#app")
+    </script>-->
+    <!--<script>
+        const vm = Vue.createApp({
+            data(){
+                return {
+                    counter: 0
+                };
+            },
+            methods:{
+                enviar(e){
+                    console.log(e);
+                }
+            },
+            template: `<form v-on:submit.prevent.stop="enviar"><button>{{counter}}</button></form>`
+        }).mount("#app")
+    </script>-->
+    <!--<script>
+        const vm = Vue.createApp({
+            data(){
+                return {
+                    counter: 0
+                };
+            },
+            methods:{
+                increment(){
+                    console.log("click")
+                    this.counter++;
+                }
+            },
+            template: `<button v-on:click="increment">{{counter}}</buttton>`
+        }).mount("#app")
+    </script>-->
+    <!--<script>
+        const vm = Vue.createApp({
+            data(){
+                return {
+                    img:"https://i.picsum.photos/id/1/5616/3744.jpg?hmac=kKHwwU8s46oNettHKwJ24qOlIAsWN9d2TtsXDoCWWsQ"
+                };
+            },
+            template: `<img v-bind:src="img" v-bind:alt="img" />`
+        }).mount("#app")
+        console.log(vm);
+    </script>-->
+    <!--<script>
+        const vm = Vue.createApp({
+            data(){
+                return {
+                    text: "hola vue"
+                }
+            },
+            template:`<div v-text="text"></div>`
+        }).mount("#app")
+        console.log(vm);
+    </script>-->
+    <!--<script>
+        const vm = Vue.createApp({
+            data(){
+                return { 
+                };
+            },
+            watch:{
+            },
+            methods:{
+            },
+            computed:{
+            },
+            template:`
+            
+            `
+        }).mount("#app2")-->
+</body>
+</html>
